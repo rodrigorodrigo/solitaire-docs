@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Solitaire</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #3B29FF;
+            --dark-navy: #03216C;
+            --text-black: #1C1C1C;
+            --accent-green: #1CC691;
+            --light-blue: #F1F9FF;
+            --gray-border: #E5E5E5;
+            --gray-light: #F8F9FA;
+            --white: #ffffff;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-black);
+            background-color: var(--white);
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--gray-border);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .app-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+        }
+
+        .page-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: #6C757D;
+            font-style: italic;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+        }
+
+        /* Table of Contents */
+        .toc-wrapper {
+            position: sticky;
+            top: 140px;
+            align-self: start;
+            max-height: calc(100vh - 160px);
+            overflow-y: auto;
+        }
+
+        .toc {
+            background-color: var(--gray-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .toc h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-navy);
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: var(--text-black);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+            display: block;
+            padding: 0.25rem 0;
+        }
+
+        .toc a:hover {
+            color: var(--primary-blue);
+        }
+
+        .toc .sub-item {
+            padding-left: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Main content */
+        .content {
+            max-width: 800px;
+        }
+
+        .intro {
+            background-color: var(--light-blue);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 4px;
+        }
+
+        .intro p {
+            margin-bottom: 0.75rem;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 140px;
+        }
+
+        .section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-border);
+        }
+
+        .section h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-black);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-black);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+        }
+
+        .section ul, .section ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .section strong {
+            font-weight: 600;
+            color: var(--dark-navy);
+        }
+
+        /* Emphasis boxes */
+        .important-box {
+            background-color: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .important-box strong {
+            color: #856404;
+        }
+
+        /* Contact section */
+        .contact-box {
+            background-color: var(--gray-light);
+            border: 1px solid var(--gray-border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--gray-light);
+            border-top: 1px solid var(--gray-border);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #6C757D;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .toc-wrapper {
+                position: static;
+                max-height: none;
+            }
+
+            .toc {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .page-title {
+                font-size: 1.75rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .header {
+                position: static;
+            }
+
+            .toc-wrapper {
+                display: none;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="app-title">Solitaire</div>
+            <h1 class="page-title">Terms and Conditions</h1>
+            <p class="last-updated">Last Updated: November 23, 2025</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="toc-wrapper">
+            <nav class="toc">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#license">2. License to Use</a></li>
+                    <li><a href="#accounts">3. User Accounts</a></li>
+                    <li><a href="#subscriptions">4. Premium Subscriptions</a>
+                        <ul>
+                            <li class="sub-item"><a href="#sub-tiers">Subscription Tiers</a></li>
+                            <li class="sub-item"><a href="#sub-payment">Payment & Renewal</a></li>
+                            <li class="sub-item"><a href="#sub-cancel">Cancellation & Refunds</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#advertising">5. Advertising</a></li>
+                    <li><a href="#conduct">6. Acceptable Use</a></li>
+                    <li><a href="#intellectual-property">7. Intellectual Property</a></li>
+                    <li><a href="#privacy">8. Privacy & Data Collection</a></li>
+                    <li><a href="#analytics">9. Analytics & Crash Reporting</a></li>
+                    <li><a href="#notifications">10. Notifications</a></li>
+                    <li><a href="#third-party">11. Third-Party Services</a></li>
+                    <li><a href="#disclaimers">12. Disclaimers</a></li>
+                    <li><a href="#limitation">13. Limitation of Liability</a></li>
+                    <li><a href="#indemnification">14. Indemnification</a></li>
+                    <li><a href="#termination">15. Termination</a></li>
+                    <li><a href="#changes">16. Changes to Terms</a></li>
+                    <li><a href="#governing-law">17. Governing Law</a></li>
+                    <li><a href="#dispute">18. Dispute Resolution</a></li>
+                    <li><a href="#severability">19. Severability</a></li>
+                    <li><a href="#contact">20. Contact Information</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="intro">
+                <p><strong>Welcome to Solitaire!</strong></p>
+                <p>These Terms and Conditions ("Terms", "Terms and Conditions") constitute a legally binding agreement between you ("User", "you", or "your") and Rodrigo ("Developer", "we", "us", or "our") regarding your use of the Solitaire mobile application (the "App", "Application", or "Service").</p>
+                <p>By downloading, installing, or using our App, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, please do not use our App.</p>
+            </div>
+
+            <section id="acceptance" class="section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing and using Solitaire, you accept and agree to be bound by the terms and provisions of this agreement. Additionally, when using this App, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+                <p>These Terms apply to all users of the App, including without limitation users who are browsers, players, subscribers, and/or contributors of content.</p>
+                <div class="important-box">
+                    <p><strong>Age Requirement:</strong> You must be at least 13 years of age to use this App. If you are between 13 and 18 years of age (or the age of legal majority in your jurisdiction), you may only use the App under the supervision of a parent or legal guardian who agrees to be bound by these Terms.</p>
+                </div>
+            </section>
+
+            <section id="license" class="section">
+                <h2>2. License to Use</h2>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on a mobile device that you own or control, solely for your personal, non-commercial use.</p>
+
+                <h3>License Restrictions</h3>
+                <p>You agree not to, and you will not permit others to:</p>
+                <ul>
+                    <li>License, sell, rent, lease, assign, distribute, transmit, host, outsource, disclose or otherwise commercially exploit the App</li>
+                    <li>Modify, make derivative works of, disassemble, decrypt, reverse compile or reverse engineer any part of the App</li>
+                    <li>Remove, alter or obscure any proprietary notice (including any notice of copyright or trademark) of the Developer or its affiliates, partners, suppliers or licensors</li>
+                    <li>Use the App for any illegal or unauthorized purpose</li>
+                    <li>Attempt to gain unauthorized access to any portion of the App or any other systems or networks connected to the App</li>
+                    <li>Use any robot, spider, scraper, or other automated means to access the App</li>
+                </ul>
+            </section>
+
+            <section id="accounts" class="section">
+                <h2>3. User Accounts</h2>
+                <p>The App utilizes Firebase Authentication to provide optional account creation for enhanced features such as cross-device synchronization of game statistics and premium subscription management.</p>
+
+                <h3>Account Creation</h3>
+                <p>When you create an account, you agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Maintain the security of your account credentials</li>
+                    <li>Accept responsibility for all activities that occur under your account</li>
+                    <li>Immediately notify us of any unauthorized use of your account</li>
+                </ul>
+
+                <h3>Account Security</h3>
+                <p>You are responsible for safeguarding the password or credentials you use to access the App and for any activities or actions under your account. We encourage you to use "strong" passwords with your account. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+
+                <h3>Account Termination</h3>
+                <p>You may delete your account at any time through the App settings. We reserve the right to suspend or terminate your account if you violate these Terms or engage in conduct that we determine, in our sole discretion, to be inappropriate or harmful to the App or other users.</p>
+            </section>
+
+            <section id="subscriptions" class="section">
+                <h2>4. Premium Subscriptions</h2>
+                <p>Solitaire offers optional premium subscriptions that provide an ad-free experience and additional features. Subscriptions are managed through RevenueCat and processed via Apple App Store or Google Play Store.</p>
+
+                <h3 id="sub-tiers">Subscription Tiers</h3>
+                <p>We offer the following subscription options:</p>
+                <ul>
+                    <li><strong>Monthly Subscription:</strong> Automatically renews every month</li>
+                    <li><strong>Yearly Subscription:</strong> Automatically renews every year</li>
+                    <li><strong>Lifetime Purchase:</strong> One-time payment for permanent premium access (non-renewing)</li>
+                </ul>
+
+                <h3 id="sub-payment">Payment & Automatic Renewal</h3>
+                <p>All subscription purchases are processed through the Apple App Store or Google Play Store, depending on your device platform. The following terms apply:</p>
+                <ul>
+                    <li><strong>Payment:</strong> Payment will be charged to your Apple ID or Google Play account at confirmation of purchase</li>
+                    <li><strong>Automatic Renewal:</strong> Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period</li>
+                    <li><strong>Renewal Charge:</strong> Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                    <li><strong>Price Changes:</strong> The renewal price will be clearly displayed. You will be notified of any price changes in advance</li>
+                    <li><strong>Managing Subscriptions:</strong> You can manage and cancel subscriptions by going to your account settings on the App Store or Google Play Store after purchase</li>
+                </ul>
+
+                <div class="important-box">
+                    <p><strong>Important Notice:</strong> Subscriptions are tied to your Apple ID or Google Play account and are platform-specific. A subscription purchased on iOS cannot be transferred to Android, and vice versa. However, if you use Firebase Authentication to create an account, your premium status will sync across devices on the same platform.</p>
+                </div>
+
+                <h3 id="sub-cancel">Cancellation & Refunds</h3>
+                <p><strong>Cancellation:</strong> You may cancel your subscription at any time through your App Store or Google Play Store account settings. Cancellation will take effect at the end of the current billing period, and you will retain premium access until that time.</p>
+                <p><strong>Refunds:</strong> All sales are final. Refund requests must be directed to Apple or Google, as applicable, as we do not have the ability to issue refunds for purchases made through their platforms. Please review the refund policies of the App Store or Google Play Store for more information.</p>
+                <p><strong>Restore Purchases:</strong> If you have purchased a subscription or lifetime purchase and it is not recognized on your device, you may use the "Restore Purchases" feature in the App to restore your premium access.</p>
+
+                <h3>Free Trials</h3>
+                <p>We may offer free trial periods for subscriptions. If a free trial is offered, the specific terms of the trial period will be disclosed at the time of sign-up. Unless you cancel before the end of the trial period, you will be automatically charged the subscription fee when the trial expires.</p>
+            </section>
+
+            <section id="advertising" class="section">
+                <h2>5. Advertising</h2>
+                <p>The free version of Solitaire is supported by advertising. We use Google AdMob along with mediation networks including Unity Ads and Pangle (ByteDance) to display advertisements within the App.</p>
+
+                <h3>Ad Display</h3>
+                <p>By using the free version of the App, you agree to the display of advertisements, which may include:</p>
+                <ul>
+                    <li><strong>Banner Ads:</strong> Displayed at the bottom of screens during gameplay and in menus</li>
+                    <li><strong>Interstitial Ads:</strong> Full-screen ads displayed between game sessions at intervals determined by AdMob's server-side frequency management</li>
+                    <li><strong>App Open Ads:</strong> Ads that may appear when launching the App</li>
+                </ul>
+
+                <h3>Ad Personalization & Data Collection</h3>
+                <p>Our advertising partners collect certain information to serve personalized advertisements. This may include:</p>
+                <ul>
+                    <li>Device identifiers (such as advertising ID)</li>
+                    <li>IP address and approximate location</li>
+                    <li>Device information (model, operating system, screen size)</li>
+                    <li>App usage data and interactions</li>
+                    <li>Ad performance metrics (impressions, clicks)</li>
+                </ul>
+                <p>For more information about how advertising data is collected and used, please review our Privacy Policy.</p>
+
+                <h3>Premium Subscription</h3>
+                <p>Premium subscribers receive an ad-free experience. No advertisements will be displayed for users with an active premium subscription.</p>
+
+                <h3>Third-Party Advertisers</h3>
+                <p>We do not control the content of third-party advertisements. Advertisers and advertising networks may collect information about your interaction with ads. We are not responsible for the practices or content of third-party advertisers.</p>
+            </section>
+
+            <section id="conduct" class="section">
+                <h2>6. Acceptable Use</h2>
+                <p>By using Solitaire, you agree to use the App only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+                <ul>
+                    <li>Use the App in any way that violates any applicable federal, state, local, or international law or regulation</li>
+                    <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the App</li>
+                    <li>Attempt to interfere with, compromise the system integrity or security, or decipher any transmissions to or from the servers running the App</li>
+                    <li>Use any robot, spider, or other automatic device, process, or means to access the App for any purpose</li>
+                    <li>Introduce any viruses, trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful</li>
+                    <li>Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the App or any server, computer, or database connected to the App</li>
+                    <li>Use the App to transmit, or procure the sending of, any advertising or promotional material without our prior written consent</li>
+                    <li>Use the App in any manner that could disable, overburden, damage, or impair the App</li>
+                    <li>Modify, adapt, hack, reverse engineer, decompile, or disassemble the App</li>
+                    <li>Remove or modify any copyright, trademark, or other proprietary rights notice</li>
+                </ul>
+            </section>
+
+            <section id="intellectual-property" class="section">
+                <h2>7. Intellectual Property</h2>
+                <p>The App and its entire contents, features, and functionality (including but not limited to all information, software, code, text, displays, graphics, photographs, video, audio, design, card designs, animations, game logic, and the selection and arrangement thereof) are owned by the Developer, its licensors, or other providers of such material and are protected by copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+
+                <h3>Copyright</h3>
+                <p>All content included in the App, such as text, graphics, logos, images, card designs, game animations, audio clips, and software, is the property of Rodrigo or its content suppliers and protected by international copyright laws.</p>
+
+                <h3>Trademarks</h3>
+                <p>Solitaire name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of the Developer. You must not use such marks without our prior written permission. All other names, logos, product and service names, designs, and slogans mentioned in the App are the trademarks of their respective owners.</p>
+
+                <h3>License Grant</h3>
+                <p>These Terms grant you a limited license to use the App for personal, non-commercial purposes only. This license does not include any resale or commercial use of the App or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of the App or its contents; or any use of data mining, robots, or similar data gathering and extraction tools.</p>
+
+                <h3>Feedback</h3>
+                <p>If you provide us with any feedback, suggestions, or ideas regarding the App ("Feedback"), you grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and incorporate such Feedback into the App without any obligation to you.</p>
+            </section>
+
+            <section id="privacy" class="section">
+                <h2>8. Privacy & Data Collection</h2>
+                <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. By using the App, you consent to the data practices described in our Privacy Policy.</p>
+
+                <h3>Information We Collect</h3>
+                <p>We collect information that you provide directly to us, as well as information automatically collected through your use of the App, including:</p>
+                <ul>
+                    <li><strong>Account Information:</strong> Email address and authentication credentials (via Firebase Auth)</li>
+                    <li><strong>Game Statistics:</strong> Games played, win rate, game times, streaks, and achievements</li>
+                    <li><strong>Device Information:</strong> Device model, operating system, unique device identifiers</li>
+                    <li><strong>Usage Data:</strong> App interactions, features used, preferences, and settings</li>
+                    <li><strong>Subscription Data:</strong> Purchase history, subscription status (via RevenueCat)</li>
+                </ul>
+
+                <h3>Data Storage</h3>
+                <p>Your game data is stored locally on your device using SQLite and SharedPreferences. If you create an account, certain data may be synchronized across your devices via Firebase services.</p>
+
+                <h3>Data Sharing</h3>
+                <p>We do not sell your personal information. We may share your information with third-party service providers who assist us in operating the App, conducting our business, or serving our users, including:</p>
+                <ul>
+                    <li>Firebase (Google) - Authentication, analytics, and crash reporting</li>
+                    <li>RevenueCat - Subscription management</li>
+                    <li>AdMob, Unity Ads, Pangle - Advertising (for free users)</li>
+                </ul>
+
+                <h3>GDPR & International Users</h3>
+                <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have certain rights under the General Data Protection Regulation (GDPR) regarding your personal data, including the right to access, correct, delete, or restrict processing of your data. For EU users, we obtain your explicit consent for data processing, including the transfer and storage of data in the United States and other countries where our service providers operate.</p>
+            </section>
+
+            <section id="analytics" class="section">
+                <h2>9. Analytics & Crash Reporting</h2>
+                <p>We use Firebase Analytics and Firebase Crashlytics to improve the App's performance, understand user behavior, and identify and fix technical issues.</p>
+
+                <h3>Firebase Analytics</h3>
+                <p>Firebase Analytics collects usage data such as:</p>
+                <ul>
+                    <li>App opens and session duration</li>
+                    <li>Screen views and navigation patterns</li>
+                    <li>Game events (games started, completed, won)</li>
+                    <li>User demographics (country, device type, language)</li>
+                    <li>Custom events (achievements, settings changes)</li>
+                </ul>
+                <p>This data is used to understand how users interact with the App and to make improvements to gameplay and user experience.</p>
+
+                <h3>Firebase Crashlytics</h3>
+                <p>Firebase Crashlytics automatically collects crash reports and diagnostic information when the App experiences an error or crash, including:</p>
+                <ul>
+                    <li>Stack traces and error messages</li>
+                    <li>Device state at the time of crash (memory usage, battery level, network status)</li>
+                    <li>App version and build information</li>
+                    <li>Device model and operating system version</li>
+                </ul>
+                <p>This data helps us identify and fix bugs quickly to ensure a stable and reliable App experience.</p>
+
+                <h3>Data Processing</h3>
+                <p>Firebase Analytics and Crashlytics are provided by Google LLC. By using the App, you consent to the processing of your data by Google in accordance with Google's Privacy Policy and the Firebase Terms of Service. Google acts as a data processor on our behalf, and data is processed in accordance with our instructions and applicable data protection laws.</p>
+
+                <h3>Opting Out</h3>
+                <p>Analytics and crash reporting are essential for maintaining and improving the App. However, you may limit data collection by adjusting your device's privacy settings or by contacting us directly.</p>
+            </section>
+
+            <section id="notifications" class="section">
+                <h2>10. Notifications</h2>
+                <p>Solitaire may send you local push notifications to remind you to play, celebrate achievements, or inform you about app updates and features.</p>
+
+                <h3>Types of Notifications</h3>
+                <ul>
+                    <li><strong>Daily Reminders:</strong> Scheduled notifications encouraging gameplay</li>
+                    <li><strong>Achievement Alerts:</strong> Notifications celebrating milestones and accomplishments</li>
+                    <li><strong>App Updates:</strong> Information about new features or important changes</li>
+                </ul>
+
+                <h3>Managing Notifications</h3>
+                <p>You can control notification preferences within the App's settings or through your device's system settings. Disabling notifications will not affect your ability to use the App's core features.</p>
+
+                <h3>Timezone Awareness</h3>
+                <p>Scheduled notifications are timezone-aware and will be delivered at appropriate local times based on your device's timezone settings.</p>
+            </section>
+
+            <section id="third-party" class="section">
+                <h2>11. Third-Party Services</h2>
+                <p>The App integrates with several third-party services to provide enhanced functionality. Your use of these services is subject to their respective terms of service and privacy policies:</p>
+
+                <h3>Service Providers</h3>
+                <ul>
+                    <li><strong>Firebase (Google):</strong> Authentication, analytics, crash reporting - <a href="https://firebase.google.com/terms" target="_blank">Firebase Terms</a></li>
+                    <li><strong>RevenueCat:</strong> Subscription management - <a href="https://www.revenuecat.com/terms" target="_blank">RevenueCat Terms</a></li>
+                    <li><strong>Google AdMob:</strong> Advertising network - <a href="https://developers.google.com/admob/terms" target="_blank">AdMob Terms</a></li>
+                    <li><strong>Unity Ads:</strong> Advertising mediation - <a href="https://unity.com/legal/game-player-and-app-user-terms-of-service" target="_blank">Unity Terms</a></li>
+                    <li><strong>Pangle (ByteDance):</strong> Advertising mediation - <a href="https://www.pangleglobal.com/terms" target="_blank">Pangle Terms</a></li>
+                </ul>
+
+                <h3>External Links</h3>
+                <p>The App may contain links to third-party websites or services (such as privacy policies, support pages, or social media). We are not responsible for the content, privacy policies, or practices of third-party websites or services. We encourage you to review the terms and privacy policies of any third-party sites you visit.</p>
+
+                <h3>No Endorsement</h3>
+                <p>The inclusion of third-party services or links does not imply endorsement or recommendation by the Developer. We are not responsible for any transactions between you and third-party providers.</p>
+            </section>
+
+            <section id="disclaimers" class="section">
+                <h2>12. Disclaimers</h2>
+                <p>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR COURSE OF PERFORMANCE.</p>
+
+                <h3>No Warranty</h3>
+                <p>The Developer, its subsidiaries, affiliates, and licensors do not warrant that:</p>
+                <ul>
+                    <li>The App will function uninterrupted, secure, or available at any particular time or location</li>
+                    <li>Any errors or defects will be corrected</li>
+                    <li>The App is free of viruses or other harmful components</li>
+                    <li>The results of using the App will meet your requirements</li>
+                </ul>
+
+                <h3>Use at Your Own Risk</h3>
+                <p>Your use of the App is at your sole risk. You understand and agree that you download, install, and use the App at your own discretion and risk, and that you are solely responsible for any damage to your mobile device or loss of data that results from the use of the App.</p>
+
+                <h3>Technical Issues</h3>
+                <p>The Developer does not guarantee that the App will be compatible with all devices or operating systems. The App may experience temporary outages, errors, or technical issues. We reserve the right to modify, suspend, or discontinue any aspect of the App at any time without notice.</p>
+
+                <h3>Content Accuracy</h3>
+                <p>We make no representations or warranties regarding the accuracy, reliability, completeness, or timeliness of any content displayed within the App, including game statistics, achievements, or other information.</p>
+            </section>
+
+            <section id="limitation" class="section">
+                <h2>13. Limitation of Liability</h2>
+                <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER, ITS AFFILIATES, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+                <ul>
+                    <li>Your access to, use of, or inability to access or use the App</li>
+                    <li>Any conduct or content of any third party on or through the App</li>
+                    <li>Any content obtained from the App</li>
+                    <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+                    <li>Statements or conduct of any third party on the App</li>
+                    <li>Any bugs, viruses, trojan horses, or the like that may be transmitted to or through the App</li>
+                    <li>Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through the App</li>
+                </ul>
+
+                <h3>Maximum Liability</h3>
+                <p>IN NO EVENT SHALL THE DEVELOPER'S TOTAL LIABILITY TO YOU FOR ALL DAMAGES, LOSSES, AND CAUSES OF ACTION EXCEED THE AMOUNT YOU HAVE PAID TO US IN THE LAST SIX (6) MONTHS, OR, IF GREATER, ONE HUNDRED DOLLARS ($100).</p>
+
+                <h3>Jurisdictional Limitations</h3>
+                <p>Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitations or exclusions may not apply to you. In such cases, the Developer's liability will be limited to the fullest extent permitted by applicable law.</p>
+            </section>
+
+            <section id="indemnification" class="section">
+                <h2>14. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless the Developer, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:</p>
+                <ul>
+                    <li>Your violation of these Terms</li>
+                    <li>Your use of the App, including but not limited to your use of any content, features, or functionality</li>
+                    <li>Your violation of any law, rule, regulation, or the rights of a third party</li>
+                    <li>Your account or any use of your account credentials</li>
+                    <li>Any content or information you submit, post, or transmit through the App</li>
+                </ul>
+                <p>We reserve the right to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which event you will fully cooperate with us in asserting any available defenses.</p>
+            </section>
+
+            <section id="termination" class="section">
+                <h2>15. Termination</h2>
+                <p>These Terms are effective until terminated by either you or the Developer.</p>
+
+                <h3>Termination by You</h3>
+                <p>You may terminate these Terms at any time by:</p>
+                <ul>
+                    <li>Deleting the App from all your devices</li>
+                    <li>Ceasing all use of the App</li>
+                    <li>Deleting your account (if applicable)</li>
+                </ul>
+
+                <h3>Termination by Us</h3>
+                <p>We may terminate or suspend your access to the App immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms. Reasons for termination may include, but are not limited to:</p>
+                <ul>
+                    <li>Violation of these Terms or any applicable law</li>
+                    <li>Fraudulent, abusive, or illegal activity</li>
+                    <li>Requests by law enforcement or other government agencies</li>
+                    <li>Discontinuation or material modification to the App</li>
+                    <li>Unexpected technical issues or problems</li>
+                </ul>
+
+                <h3>Effect of Termination</h3>
+                <p>Upon termination, your right to use the App will immediately cease. All provisions of these Terms which by their nature should survive termination shall survive, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+
+                <h3>Subscription Termination</h3>
+                <p>If your account is terminated for violation of these Terms, you will not be eligible for a refund of any subscription fees. Active subscriptions will continue until the end of the current billing period unless cancelled through the App Store or Google Play Store.</p>
+            </section>
+
+            <section id="changes" class="section">
+                <h2>16. Changes to Terms</h2>
+                <p>We reserve the right to modify or replace these Terms at any time at our sole discretion. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.</p>
+
+                <h3>Notification of Changes</h3>
+                <p>We may notify you of changes through:</p>
+                <ul>
+                    <li>In-app notifications</li>
+                    <li>Email (if you have provided an email address)</li>
+                    <li>Notice on our support website</li>
+                    <li>Push notifications</li>
+                </ul>
+
+                <h3>Acceptance of Changes</h3>
+                <p>Your continued use of the App after any such changes constitutes your acceptance of the new Terms. If you do not agree to the modified Terms, you must stop using the App.</p>
+
+                <h3>Review Responsibility</h3>
+                <p>It is your responsibility to review these Terms periodically for changes. The "Last Updated" date at the top of this page indicates when these Terms were last revised.</p>
+            </section>
+
+            <section id="governing-law" class="section">
+                <h2>17. Governing Law</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of Brazil, without regard to its conflict of law provisions.</p>
+                <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+
+                <h3>International Users</h3>
+                <p>If you are accessing the App from outside Brazil, you do so at your own initiative and are responsible for compliance with local laws. The App is controlled and operated from Brazil, and we make no representation that materials in the App are appropriate or available for use in other locations.</p>
+            </section>
+
+            <section id="dispute" class="section">
+                <h2>18. Dispute Resolution</h2>
+                <p>In the event of any dispute, claim, question, or disagreement arising from or relating to these Terms or the breach thereof, the parties hereto shall use their best efforts to settle the dispute through good-faith negotiation.</p>
+
+                <h3>Informal Resolution</h3>
+                <p>Before filing a claim, you agree to try to resolve the dispute informally by contacting us first. We'll try to resolve the dispute informally by contacting you via email. If a dispute is not resolved within 30 days of submission, you or the Developer may bring a formal proceeding.</p>
+
+                <h3>Arbitration</h3>
+                <p>Any controversy or claim arising out of or relating to these Terms shall be settled by binding arbitration in accordance with the commercial arbitration rules of CAM-CCBC (Center for Arbitration and Mediation of the Chamber of Commerce Brazil-Canada). Any such controversy or claim shall be arbitrated on an individual basis and shall not be consolidated in any arbitration with any claim or controversy of any other party.</p>
+
+                <h3>Class Action Waiver</h3>
+                <p>YOU AND THE DEVELOPER AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</p>
+
+                <h3>Exceptions</h3>
+                <p>Notwithstanding the above, either party may seek injunctive or other equitable relief in any court of competent jurisdiction to prevent the actual or threatened infringement, misappropriation, or violation of a party's copyrights, trademarks, trade secrets, patents, or other intellectual property rights.</p>
+            </section>
+
+            <section id="severability" class="section">
+                <h2>19. Severability</h2>
+                <p>If any provision of these Terms is found by a court of competent jurisdiction to be invalid, illegal, or unenforceable, the parties nevertheless agree that the court should endeavor to give effect to the parties' intentions as reflected in the provision, and the other provisions of these Terms shall remain in full force and effect.</p>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>20. Contact Information</h2>
+                <div class="contact-box">
+                    <h2>Questions or Concerns?</h2>
+                    <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+                    <p><strong>Developer:</strong> Rodrigo</p>
+                    <p><strong>Email:</strong> <a href="mailto:support.rsclabs@gmail.com">support.rsclabs@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/rodrigorodrigo" target="_blank">rodrigorodrigo</a></p>
+                    <p><strong>Support Website:</strong> <a href="https://www.rsclabs.net/" target="_blank">www.rsclabs.net</a></p>
+                </div>
+            </section>
+
+            <hr style="margin: 3rem 0; border: none; border-top: 1px solid var(--gray-border);">
+
+            <section class="section">
+                <h3>Additional Information</h3>
+                <p><strong>Entire Agreement:</strong> These Terms, along with our Privacy Policy, constitute the entire agreement between you and the Developer regarding the use of the App and supersede all prior or contemporaneous understandings and agreements, whether written or oral, regarding such subject matter.</p>
+                <p><strong>Assignment:</strong> You may not assign or transfer these Terms or your rights hereunder, in whole or in part, by operation of law or otherwise, without our prior written consent. We may assign these Terms at any time without notice or consent. Any assignment in violation of this section shall be void.</p>
+                <p><strong>Waiver:</strong> No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and our failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+                <p><strong>Headings:</strong> The section headings in these Terms are for convenience only and have no legal or contractual effect.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Rodrigo. All rights reserved. | Solitaire Mobile Application</p>
+        <p style="margin-top: 0.5rem;"><a href="#" style="color: var(--primary-blue); text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: var(--primary-blue); text-decoration: none;">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>
