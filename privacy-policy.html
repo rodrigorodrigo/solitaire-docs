@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - RSC Labs Apps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-blue: #3B29FF;
+            --dark-navy: #03216C;
+            --text-black: #1C1C1C;
+            --light-blue: #F1F9FF;
+            --gray-border: #E5E5E5;
+            --gray-light: #F8F9FA;
+            --white: #ffffff;
+        }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.7; color: var(--text-black); background-color: var(--white); }
+        .header { background-color: var(--white); border-bottom: 1px solid var(--gray-border); padding: 2rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .app-title { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: var(--primary-blue); margin-bottom: 0.25rem; }
+        .page-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: var(--text-black); margin-bottom: 0.5rem; }
+        .last-updated { font-size: 0.9rem; color: #6C757D; font-style: italic; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 280px 1fr; gap: 3rem; }
+        .toc-wrapper { position: sticky; top: 140px; align-self: start; max-height: calc(100vh - 160px); overflow-y: auto; }
+        .toc { background-color: var(--gray-light); border-radius: 8px; padding: 1.5rem; }
+        .toc h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: var(--dark-navy); }
+        .toc ul { list-style: none; }
+        .toc li { margin-bottom: 0.5rem; }
+        .toc a { color: var(--text-black); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; display: block; padding: 0.25rem 0; }
+        .toc a:hover { color: var(--primary-blue); }
+        .content { max-width: 800px; }
+        .intro { background-color: var(--light-blue); border-left: 4px solid var(--primary-blue); padding: 1.5rem; margin-bottom: 3rem; border-radius: 4px; }
+        .intro p { margin-bottom: 0.75rem; }
+        .intro p:last-child { margin-bottom: 0; }
+        .section { margin-bottom: 3rem; scroll-margin-top: 140px; }
+        .section h2 { font-size: 1.75rem; font-weight: 600; color: var(--dark-navy); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gray-border); }
+        .section h3 { font-size: 1.35rem; font-weight: 600; color: var(--text-black); margin-top: 2rem; margin-bottom: 1rem; }
+        .section p { margin-bottom: 1rem; }
+        .section ul { margin-bottom: 1rem; padding-left: 2rem; }
+        .section li { margin-bottom: 0.5rem; }
+        .section strong { font-weight: 600; color: var(--dark-navy); }
+        .contact-box { background-color: var(--gray-light); border: 1px solid var(--gray-border); border-radius: 8px; padding: 2rem; margin-top: 1.5rem; }
+        .contact-box p { margin-bottom: 0.5rem; }
+        .contact-box a { color: var(--primary-blue); text-decoration: none; }
+        .contact-box a:hover { text-decoration: underline; }
+        .footer { background-color: var(--gray-light); border-top: 1px solid var(--gray-border); padding: 2rem 0; margin-top: 4rem; text-align: center; }
+        .footer p { color: #6C757D; font-size: 0.9rem; }
+        @media (max-width: 968px) { .container { grid-template-columns: 1fr; gap: 2rem; } .toc-wrapper { position: static; max-height: none; } }
+        @media (max-width: 640px) { .container { padding: 2rem 1rem; } .header-content { padding: 0 1rem; } .page-title { font-size: 1.75rem; } .section h2 { font-size: 1.5rem; } }
+        @media print { .header { position: static; } .toc-wrapper { display: none; } .container { grid-template-columns: 1fr; } .section { page-break-inside: avoid; } }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-content">
+        <div class="app-title">RSC Labs</div>
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="last-updated">Last Updated: March 2026</p>
+    </div>
+</header>
+<div class="container">
+    <aside class="toc-wrapper">
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#introduction">1. Introduction</a></li>
+                <li><a href="#data-controller">2. Data Controller</a></li>
+                <li><a href="#data-collected">3. Data We Collect</a></li>
+                <li><a href="#how-we-use">4. How We Use Your Data</a></li>
+                <li><a href="#third-party">5. Third-Party Services</a></li>
+                <li><a href="#trackers">6. Cookies &amp; Trackers</a></li>
+                <li><a href="#your-rights">7. Your Rights</a></li>
+                <li><a href="#opt-out">8. Opt-Out</a></li>
+                <li><a href="#data-retention">9. Data Retention</a></li>
+                <li><a href="#changes">10. Changes to This Policy</a></li>
+                <li><a href="#contact">11. Contact Us</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="content">
+        <section class="intro">
+            <p><strong>Your privacy matters to us.</strong></p>
+            <p>This Privacy Policy explains how RSC Labs (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) collects, uses, and safeguards your information when you use any of our mobile applications, including <em>Holy Bible</em>, <em>Tanakh</em>, <em>Bhagavad Gita</em>, <em>Dhammapada</em>, <em>Quran</em>, <em>Solitaire</em>, and any other apps we publish (collectively, the &quot;Apps&quot;).</p>
+            <p>By downloading or using any of our Apps, you agree to the practices described in this policy.</p>
+        </section>
+        <section class="section" id="introduction">
+            <h2>1. Introduction</h2>
+            <p>RSC Labs is committed to protecting your privacy. Our Apps are designed primarily for personal, offline use &mdash; reading religious texts, studying sacred scriptures, and playing games. We collect only the data necessary to provide and improve our services.</p>
+            <p>This policy applies to all RSC Labs mobile applications available on the Google Play Store and Apple App Store.</p>
+        </section>
+        <section class="section" id="data-controller">
+            <h2>2. Data Controller</h2>
+            <p>The data controller responsible for your information is:</p>
+            <div class="contact-box">
+                <p><strong>RSC Labs</strong></p>
+                <p>313# 33 Bay St, Toronto, ON, Canada</p>
+                <p>Email: <a href="mailto:privacy@rsclabs.net">privacy@rsclabs.net</a></p>
+            </div>
+        </section>
+        <section class="section" id="data-collected">
+            <h2>3. Data We Collect</h2>
+            <p>We collect the following categories of information depending on which App you use and which features you enable:</p>
+            <h3>Account Data</h3>
+            <p>If you create an optional account, we store your email address for authentication via Firebase Authentication. Account creation is optional &mdash; all Apps work fully without an account.</p>
+            <h3>Usage &amp; Progress Data</h3>
+            <ul>
+                <li><strong>Reading progress:</strong> Which books, chapters, or sections you have read.</li>
+                <li><strong>Bookmarks:</strong> Verses or passages you have saved.</li>
+                <li><strong>Quiz scores:</strong> Performance data for in-app quiz features.</li>
+                <li><strong>Game statistics:</strong> Games played, win rate, and scores (game apps only).</li>
+            </ul>
+            <h3>App Preferences</h3>
+            <p>Settings such as language, theme, text size, and font are stored locally on your device using SharedPreferences. They are not transmitted to our servers unless you are signed in and cross-device sync is enabled.</p>
+            <h3>Crash Reports &amp; Analytics</h3>
+            <p>With your consent, we collect anonymous crash reports and usage analytics to improve App stability and user experience. This data is collected via Firebase Crashlytics and Firebase Analytics. See Section 6 for details.</p>
+            <h3>Advertising Data</h3>
+            <p>In Apps supported by advertising (e.g., free-tier apps), our ad partners (Google AdMob) may collect device identifiers and usage data for ad delivery. See Section 5.</p>
+        </section>
+        <section class="section" id="how-we-use">
+            <h2>4. How We Use Your Data</h2>
+            <p>We use the data we collect to:</p>
+            <ul>
+                <li>Sync your reading progress, bookmarks, and preferences across devices when you are signed in.</li>
+                <li>Provide personalised content recommendations within the App.</li>
+                <li>Improve App stability by analysing anonymous crash reports.</li>
+                <li>Understand how our Apps are used in aggregate so we can add features and fix bugs.</li>
+                <li>Display advertisements to support free access to our Apps (where applicable).</li>
+            </ul>
+            <p>We do not sell your personal data to third parties.</p>
+        </section>
+        <section class="section" id="third-party">
+            <h2>5. Third-Party Services</h2>
+            <p>Our Apps integrate with the following third-party services. Your use of these services is subject to their respective privacy policies:</p>
+            <ul>
+                <li><strong>Firebase Authentication (Google LLC):</strong> Manages optional user accounts securely. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+                <li><strong>Firebase Crashlytics (Google LLC):</strong> Collects anonymous crash reports (when enabled). <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+                <li><strong>Google Analytics for Firebase (Google LLC):</strong> Collects aggregate usage data (when enabled). <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                <li><strong>Cloud Firestore (Google LLC):</strong> Stores reading progress and bookmarks for cross-device sync (signed-in users only). <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+                <li><strong>Google AdMob (Google LLC):</strong> Displays advertisements in free-tier apps. May collect device identifiers for ad personalisation. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            </ul>
+        </section>
+        <section class="section" id="trackers">
+            <h2>6. Cookies &amp; Trackers</h2>
+            <p>Our Apps do not use browser cookies (they are native mobile apps). However, we use SDK-based trackers for the purposes described below:</p>
+            <h3>Necessary Trackers</h3>
+            <ul>
+                <li><strong>Firebase Crashlytics (Google LLC):</strong> Monitors App crashes and collects device information and unique identifiers to help us maintain stability.</li>
+            </ul>
+            <h3>Measurement Trackers</h3>
+            <ul>
+                <li><strong>Google Analytics for Firebase (Google LLC):</strong> Collects device information, session data, OS details, and usage events to help us understand how the Apps are used.</li>
+            </ul>
+            <h3>Marketing Trackers</h3>
+            <ul>
+                <li><strong>Google AdMob (Google LLC):</strong> Displays advertisements in free-tier apps and may collect device identifiers and usage data for personalised ad delivery and performance measurement.</li>
+            </ul>
+            <p>You can disable crash reports and analytics at any time via the <strong>Privacy &amp; Data</strong> section in App settings.</p>
+        </section>
+        <section class="section" id="your-rights">
+            <h2>7. Your Rights</h2>
+            <p>Under GDPR and other applicable privacy regulations, you have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of all data we hold about you using the <em>Export My Data</em> feature in App settings.</li>
+                <li><strong>Erasure:</strong> Delete your account and all associated cloud data using the <em>Delete Account</em> feature in App settings.</li>
+                <li><strong>Opt-Out:</strong> Disable crash reports and analytics at any time via <em>Privacy &amp; Data</em> in App settings.</li>
+                <li><strong>Portability:</strong> Export your data in JSON format for use in other services via the <em>Export My Data</em> feature.</li>
+                <li><strong>Rectification:</strong> Contact us to correct inaccurate personal data.</li>
+                <li><strong>Restriction:</strong> Contact us to request that we limit how we process your data.</li>
+            </ul>
+            <p>To exercise any of these rights, use the in-app controls above or contact us at <a href="mailto:privacy@rsclabs.net">privacy@rsclabs.net</a>.</p>
+        </section>
+        <section class="section" id="opt-out">
+            <h2>8. Opt-Out Information</h2>
+            <p>You can manage tracker and advertising preferences through several methods:</p>
+            <ul>
+                <li><strong>In-App Controls:</strong> Use the <em>Privacy &amp; Data</em> section in App settings to disable crash reports and analytics.</li>
+                <li><strong>Device Settings:</strong> Adjust your device's advertising settings (e.g., &quot;Limit Ad Tracking&quot; on iOS or &quot;Opt out of Ads Personalisation&quot; on Android) to limit ad tracking.</li>
+                <li><strong>Ad Settings:</strong> Visit <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a> to manage Google personalised advertising preferences.</li>
+                <li><strong>Industry Opt-Outs:</strong> Visit <a href="https://www.youronlinechoices.com" target="_blank">YourOnlineChoices.com</a> (EU/UK), the <a href="https://optout.networkadvertising.org" target="_blank">Network Advertising Initiative</a> (US), or the <a href="https://optout.aboutads.info" target="_blank">Digital Advertising Alliance</a> (US/Canada) for broader opt-out options.</li>
+            </ul>
+            <p>Disabling trackers may limit some App features, such as crash reporting and personalised content.</p>
+        </section>
+        <section class="section" id="data-retention">
+            <h2>9. Data Retention</h2>
+            <p>We retain your data for as long as your account is active or as needed to provide our services:</p>
+            <ul>
+                <li><strong>Local data</strong> (on your device) is retained until you clear it via App settings or uninstall the App.</li>
+                <li><strong>Cloud data</strong> (reading progress, bookmarks) is retained until you delete your account.</li>
+                <li><strong>Crash reports</strong> are retained for up to 90 days by Firebase Crashlytics.</li>
+                <li><strong>Analytics data</strong> is retained in aggregate, anonymised form per Google's retention policies.</li>
+            </ul>
+            <p>You can delete all your data at any time through the <em>Privacy &amp; Data</em> section in App settings.</p>
+        </section>
+        <section class="section" id="changes">
+            <h2>10. Changes to This Policy</h2>
+            <p>We reserve the right to update this Privacy Policy at any time. When we make significant changes, we will update the &quot;Last Updated&quot; date at the top of this page and notify users through the App. Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
+            <p>We encourage you to review this policy periodically.</p>
+        </section>
+        <section class="section" id="contact">
+            <h2>11. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy, your data, or wish to exercise your rights, please contact us:</p>
+            <div class="contact-box">
+                <p><strong>RSC Labs</strong></p>
+                <p>Email: <a href="mailto:privacy@rsclabs.net">privacy@rsclabs.net</a></p>
+                <p>Website: <a href="https://www.rsclabs.net">www.rsclabs.net</a></p>
+            </div>
+            <p style="margin-top: 1.5rem; color: #6C757D; font-size: 0.9rem; text-align: center;">&copy; 2026 RSC Labs. All rights reserved.</p>
+        </section>
+    </main>
+</div>
+<footer class="footer">
+    <p>
+        <a href="https://www.rsclabs.net/privacy-policy" style="color: var(--primary-blue); text-decoration: none;">Privacy Policy</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.rsclabs.net/terms-and-conditions" style="color: var(--primary-blue); text-decoration: none;">Terms and Conditions</a>
+    </p>
+</footer>
+</body>
+</html>
